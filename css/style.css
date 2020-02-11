@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  background: #F3F4FA;
+}
+
+h1, h2, h3, h4, h5, h6, li, p {
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+  background: #0089E0;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
+figure {
+  margin: 0;
+}
+
+.navbar {
+  position: relative;
+}
+.navbar .nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  width: calc(100% - 2rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.navbar .nav ul {
+  list-style: none;
+  display: flex;
+}
+.navbar .nav ul li {
+  padding-right: 1rem;
+}
+.navbar .nav .logo figure img {
+  width: 50px;
+}
+.navbar .nav .logo figure {
+  margin: 0 1rem;
+}
+
+.proyectos-section .proyectos:last-child {
+  border-bottom: 2px solid red;
+}
+.proyectos-section .proyectos-row {
+  display: flex;
+  justify-content: space-between;
+}
+.proyectos-section .proyectos-row figure {
+  overflow: hidden;
+  width: 21.5rem;
+  height: 20rem;
+}
+.proyectos-section .proyectos-row figure img {
+  width: 100%;
+}
+
+.hero {
+  background-image: url("../img/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1080px;
+  display: inherit;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,120 @@
+//Fuente de la pagina 
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
+
+//Colores en pagina principal
+$color-principal: #0089E0; 
+$color-blanco: #fff; 
+$background: #F3F4FA;
+$color_border: #ccc; 
+
+//Imagenes
+$bg-image: url('../img/banner.jpg');
+
+//Sombra de las cajas - border
+$sombra-principal: 0px 9px 32px -1px rgba(0,0,0,0.2);
+$borde-inferior: 1px solid rgba(255,255,255, 0.15);
+
+//contenedor - background-images - bottones
+@mixin container {
+    max-width: 1080px ;
+    display: inherit;
+    margin: 0 auto;
+}
+
+@mixin background($bg-image) {
+    background-image: $bg-image;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@mixin botones{
+    padding: 0.5rem 1.5rem;
+    color: $color-blanco;
+    background: $color-principal;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: $background;
+}
+
+h1, h2, h3, h4, h5, h6, li, p{
+    font-family: 'Poppins', sans-serif;
+}
+
+button{
+    @include botones();
+}
+
+figure{
+    margin: 0;
+}
+
+.navbar{
+    position: relative;
+    & .nav{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 1rem;
+        width: calc(100% - 2rem);
+        border-bottom: $borde-inferior;
+
+        & ul{
+            list-style: none;
+            display: flex;
+
+            & li{
+                padding-right: 1rem;
+            }
+        }
+
+        & .logo figure img{
+            width: 50px;
+        }
+
+        & .logo figure{
+            margin: 0 1rem;
+        }
+    }
+}
+
+.proyectos-section{
+
+    .proyectos:last-child{
+        border-bottom: 1px solid red;
+    }
+
+    & .proyectos-row{
+        display: flex;
+        justify-content: space-between;
+
+        & figure{
+            overflow: hidden;
+            width: 21.5rem;
+            height: 20rem;
+
+            & img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.hero{
+    @include background($bg-image); 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    @include container(); 
+}
