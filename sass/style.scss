@@ -274,16 +274,22 @@ li{
             width: 40%;
             text-align: center;
             padding: 3rem;
+            margin: auto 0;
 
             & .form-details{
-                text-emphasis: start;
+                text-align: start;
+                margin-bottom: 3rem;
+
+                & h4{
+                    font-size: 1.5rem;
+                }
             }
 
             & form input{
                 width: 100%;
                 margin: 0;
                 height: 32px;
-                margin-bottom: 3rem;
+                margin-bottom: 1rem;
                 border: none;
                 outline: none;
                 border-bottom: $borde-form;
@@ -293,8 +299,8 @@ li{
             & form textarea{
                 max-width: 100%;
                 min-width: 100%;
-                min-height: 40px;
-                max-height: 40px;
+                min-height: 80px;
+                max-height: 80px;
                 margin: 0;
                 padding: 0;
                 border: none;
@@ -325,6 +331,17 @@ li{
             }
         }
 
+    }
+}
+
+footer{
+    margin: 3rem 0;
+    text-align: center;
+
+    & .footer-social{
+        display: flex;
+        justify-content: center;
+        color: $color-letras;
     }
 }
 
