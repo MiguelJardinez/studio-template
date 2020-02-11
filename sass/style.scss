@@ -7,6 +7,7 @@ $color-blanco: #fff;
 $background: #F3F4FA;
 $color_border: #ccc; 
 $color-brackground: #191919;
+$color-letras: #979797; 
 
 //Imagenes
 $bg-image-hero: url('../img/banner.jpg');
@@ -15,6 +16,7 @@ $bg-image-fomr: url('../img/bg-contacto.jpg');
 //Sombra de las cajas - border
 $sombra-principal: 0px 9px 32px -1px rgba(0,0,0,0.2);
 $borde-inferior: 1px solid rgba(255,255,255, 0.15);
+$borde-form: 1px solid #aaa;
 
 //contenedor - background-images - bottones
 @mixin container {
@@ -32,12 +34,12 @@ $borde-inferior: 1px solid rgba(255,255,255, 0.15);
 }
 
 @mixin botones{
-    padding: 0.5rem 1.5rem;
+    padding: 0.7rem 1.1rem;
     color: $color-blanco;
     background: $color-principal;
     outline: none;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 body{
@@ -46,9 +48,17 @@ body{
     background: $background;
 }
 
+h1, h2, h3, h4, h5, h6{
+    color: $color-principal;
+}
+
 h1, h2, h3, h4, h5, h6, li, p{
     font-family: 'Poppins', sans-serif;
     margin: 0;
+}
+
+p{
+    color: $color-letras;
 }
 
 button{
@@ -65,7 +75,7 @@ ul{
 }
 
 li{
-    padding-right: 1rem;
+    padding-right: 1.2rem;
 }
 
 .navbar{
@@ -74,9 +84,20 @@ li{
         position: absolute;
         display: flex;
         justify-content: space-between;
-        padding: 1rem 1rem;
+        padding: 0 1rem;
         width: calc(100% - 2rem);
         border-bottom: $borde-inferior;
+        align-items: center;
+        height: 68px;
+
+        & .menu{
+            color: $color-blanco;
+            font-size: 1rem;
+        }
+
+        & .nav-social{
+            color: $color-blanco;
+        }
 
         & .logo figure img{
             width: 50px;
@@ -88,7 +109,38 @@ li{
     }
 }
 
+.hero{
+    & .hero-info{
+        text-align: center;
+        & h4, h1{
+            color: $color-blanco;
+        }
+
+        & h4{
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        & h1{
+            font-size: 6rem;
+            font-weight: 700;
+        }
+    }
+}
+
 .proyectos-section{
+
+    & .proyectos-info{
+        text-align: center;
+        margin-top: 7rem;
+        margin-bottom: 3rem;
+
+        & h3{
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+    }
 
     .proyectos:last-child{
         border-bottom: 1px solid $color_border;
@@ -102,6 +154,7 @@ li{
             overflow: hidden;
             width: 21.5rem;
             height: 20rem;
+            cursor: pointer;
 
             & img{
                 width: 100%;
@@ -128,6 +181,12 @@ li{
         width: 25%;
         align-items: center;
         width: 30%;
+        margin: auto 0;
+
+        & h3{
+            font-size: 3rem;
+            font-weight:  500;
+        }
     }
 
     & .acerca-details{
@@ -159,7 +218,19 @@ li{
         }
     }
 }
+.team-section{
 
+    & .team-info{
+        text-align: center;
+       margin-top: 7rem;
+
+       & h4{
+           font-size: 3rem;
+           font-weight: 500;
+           margin-bottom: 1.5rem;
+       }
+    }
+}
 .team{
     display: flex;
     justify-content: space-between;
@@ -168,9 +239,11 @@ li{
     & .team-card{
         background: $color-blanco;
         box-shadow: $sombra-principal;
-        padding: 2rem;
-        width: 20%;
+        padding: 4rem 1.5rem;
+        width: 23%;
+        height: auto;
         text-align: center;
+        cursor: pointer;
 
         & figure img{
             border-radius: 50%;
@@ -185,8 +258,74 @@ li{
 }
 
 .form{
-    height: 100vh;
+    height: 120vh;
     @include background($bg-image-fomr);
+    display: flex;
+    align-items: center;
+
+    .container-info{
+        display: flex;
+        width: 100%;
+        height: 80vh;
+        background: $color-blanco;
+        
+
+        & .form-info{
+            width: 40%;
+            text-align: center;
+            padding: 3rem;
+
+            & .form-details{
+                text-emphasis: start;
+            }
+
+            & form input{
+                width: 100%;
+                margin: 0;
+                height: 32px;
+                margin-bottom: 3rem;
+                border: none;
+                outline: none;
+                border-bottom: $borde-form;
+                padding: 0;
+            }
+
+            & form textarea{
+                max-width: 100%;
+                min-width: 100%;
+                min-height: 40px;
+                max-height: 40px;
+                margin: 0;
+                padding: 0;
+                border: none;
+                font-family: 'Poppins', sans-serif;
+                border-bottom: $borde-form;
+                margin-bottom: 1rem;
+                outline: none;
+            }
+
+            & button{
+                width: 100%;
+            }
+        }
+
+        & .form-bg{
+            width: 60%;
+            overflow: hidden;
+
+            & figure{
+                width: 100%;
+                height: 100%;
+
+                & img{
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+    }
 }
 
 .container{
