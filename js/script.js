@@ -20,7 +20,7 @@ $(document).ready(function () {
         }
     });
 
-    
+
     //mostrar y ocultar el boton de volver arriba
     $(window).on('scroll', function () {
 
@@ -37,21 +37,31 @@ $(document).ready(function () {
     });
 
     //Scroll suave
-    $("a.volver-arriba").on('click', function(e){
+    $("a.volver-arriba").on('click', function (e) {
         e.preventDefault()
 
-        if($(window).scrollTop != 0){
-            $('html, body').animate({scrollTop: 0}, 1000);
+        if ($(window).scrollTop != 0) {
+            $('html, body').stop().animate({ scrollTop: 0 }, 1000);
+        } else {
+
         }
-    }); 
+    });
 
 
-    $("div.volver-arriba").on('click', function(e){
+    $("div.volver-arriba").on('click', function (e) {
         e.preventDefault()
 
-        if($(window).scrollTop != 0){
-            $('html, body').animate({scrollTop: 0}, 1000);
+        if ($(window).scrollTop != 0) {
+            $('html, body').stop().animate({ scrollTop: 0 }, 1000);
         }
-    }); 
+    });
+
+    //Scroll suave para los demas elementos de la pagina
+    $("a.scroll-suave").on('click', function (e) {
+        e.preventDefault()
+
+        var offsetScroll = $($(this).attr('href')).offset().top;
+        $('html, body').stop().animate({ scrollTop: offsetScroll }, 1000);
+    });
 
 }); 
