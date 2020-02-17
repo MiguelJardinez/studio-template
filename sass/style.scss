@@ -48,6 +48,11 @@ body{
     background: $background;
 }
 
+a{
+    color: $color-blanco;
+    text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6{
     color: $color-principal;
 }
@@ -347,4 +352,52 @@ footer{
 
 .container{
     @include container(); 
+}
+
+// Seleccion de navbar con jquery
+
+.sticky{
+    z-index: 5;
+    box-shadow: $sombra-principal;
+    top: -68px;
+    transition: all 400ms ease;
+    & .nav{
+        background: $color-blanco;
+        position: fixed;
+
+        & .menu{
+            & a{
+                color: $color-brackground;
+            }
+        }
+
+        & .nav-social{
+            color: $color-brackground;
+        }
+    }
+}
+
+// Seccion de flecha top Jquery
+.flecha-top{
+    position: fixed;
+    bottom: 0;
+    right: -60px;
+    height: 40px;
+    width: 40px;
+    background: $color-brackground;
+    opacity: 0.5;
+    z-index: 5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    transition: all 400ms ease;
+    cursor: pointer;
+    & i{
+        color: $color-blanco;
+        opacity: 1;
+        z-index: 6;
+    }
 }

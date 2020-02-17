@@ -11,7 +11,50 @@
 
 <body>
 
-    <!-- Seccion de la navbar -->
+    
+
+    <!-- Flecha para regresar al top -->
+    <div class="flecha-top volver-arriba" id="flecha-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <!-- Flecha para regresar al top -->
+
+    <!-- Seccion de navbar Sticky -->
+    <section class="navbar sticky" id="fixed-header">
+        <div class="nav">
+            <div class="logo">
+                <figure class="logo">
+                    <img src="./img/logotipo.png" alt="Logo">
+                </figure>
+            </div>
+            <div class="nav-menu">
+                <ul class="menu">
+                    <a href="" class="volver-arriba"><li class="menu-item">INICIO</li></a>
+                    <a href=""><li class="menu-item">PROYECTOS</li></a>
+                    <a href=""><li class="menu-item">ACERCA DE</li></a>
+                    <a href=""><li class="menu-item">NUESTRO EQUIPO</li></a>
+                    <a href=""><li class="menu-item">CONTACTO</li></a>
+                </ul>
+            </div>
+            <div class="nav-social">
+                <ul class="social-menu">
+                    <li class="social-items">
+                        <i class="fab fa-facebook-f"></i>
+                    </li>
+                    <li class="social-items">
+                        <i class="fab fa-twitter"></i>
+                    </li>
+                    <li class="social-items">
+                        <i class="fab fa-instagram"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seccion de navbar Sticky -->
+
+    <!-- Seccion de la navbar Normal -->
     <section class="navbar">
         <div class="nav">
             <div class="logo">
@@ -21,11 +64,11 @@
             </div>
             <div class="nav-menu">
                 <ul class="menu">
-                    <li class="menu-item">INICIO</li>
-                    <li class="menu-item">PROYECTOS</li>
-                    <li class="menu-item">ACERCA DE</li>
-                    <li class="menu-item">NUESTRO EQUIPO</li>
-                    <li class="menu-item">CONTACTO</li>
+                    <a href="" class="volver-arriba"><li class="menu-item">INICIO</li></a>
+                    <a href=""><li class="menu-item">PROYECTOS</li></a>
+                    <a href=""><li class="menu-item">ACERCA DE</li></a>
+                    <a href=""><li class="menu-item">NUESTRO EQUIPO</li></a>
+                    <a href=""><li class="menu-item">CONTACTO</li></a>
                 </ul>
             </div>
             <div class="nav-social">
@@ -58,7 +101,7 @@
     <!-- Seccion del hero -->
 
     <!-- Seccion Ultimos proeyctos -->
-    <section class="proyectos-section">
+    <section class="proyectos-section" id="proyectos">
         <div class="container">
             <div class="proyectos-info">
                 <div class="proyectos-info">
@@ -265,7 +308,8 @@
     </footer>
     <!-- Footer -->
 
-    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
 
 </body>
 
